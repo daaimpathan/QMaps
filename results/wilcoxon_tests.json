@@ -1,0 +1,206 @@
+{
+  "RC101": {
+    "QPSO_vs_PSO": {
+      "statistic": 219.0,
+      "p_value": 0.7921590935438871,
+      "significant": false,
+      "mean_1": 976.2634655114063,
+      "mean_2": 977.9767562681747,
+      "cohens_d": -0.0426353624970439,
+      "better": "QPSO",
+      "effect_size_interpretation": "negligible",
+      "n_samples": 30
+    },
+    "QACO_vs_ACO": {
+      "statistic": 57.0,
+      "p_value": 0.00012333691120147705,
+      "significant": true,
+      "mean_1": 661.112662635227,
+      "mean_2": 696.1986905833268,
+      "cohens_d": -1.2270547519113542,
+      "better": "QACO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_QPSO": {
+      "statistic": 0.0,
+      "p_value": 1.862645149230957e-09,
+      "significant": true,
+      "mean_1": 557.5380492316453,
+      "mean_2": 976.2634655114063,
+      "cohens_d": -12.620760981940027,
+      "better": "QA-QPSO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_QACO": {
+      "statistic": 0.0,
+      "p_value": 1.862645149230957e-09,
+      "significant": true,
+      "mean_1": 557.5380492316453,
+      "mean_2": 661.112662635227,
+      "cohens_d": -3.8491106904554746,
+      "better": "QA-QPSO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_PSO": {
+      "statistic": 0.0,
+      "p_value": 1.862645149230957e-09,
+      "significant": true,
+      "mean_1": 557.5380492316453,
+      "mean_2": 977.9767562681747,
+      "cohens_d": -11.219901233304958,
+      "better": "QA-QPSO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_ACO": {
+      "statistic": 0.0,
+      "p_value": 1.862645149230957e-09,
+      "significant": true,
+      "mean_1": 557.5380492316453,
+      "mean_2": 696.1986905833268,
+      "cohens_d": -4.421127606161633,
+      "better": "QA-QPSO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    }
+  },
+  "RC201": {
+    "QPSO_vs_PSO": {
+      "statistic": 72.0,
+      "p_value": 0.0005548261106014252,
+      "significant": true,
+      "mean_1": 2564.3899383127496,
+      "mean_2": 2510.132253905088,
+      "cohens_d": 0.8205419087435823,
+      "better": "PSO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QACO_vs_ACO": {
+      "statistic": 71.0,
+      "p_value": 0.0005054883658885956,
+      "significant": true,
+      "mean_1": 1406.171301944171,
+      "mean_2": 1447.933232008834,
+      "cohens_d": -1.0598602570038425,
+      "better": "QACO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_QPSO": {
+      "statistic": 0.0,
+      "p_value": 1.862645149230957e-09,
+      "significant": true,
+      "mean_1": 1233.6870067503064,
+      "mean_2": 2564.3899383127496,
+      "cohens_d": -21.738786481318403,
+      "better": "QA-QPSO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_QACO": {
+      "statistic": 0.0,
+      "p_value": 1.862645149230957e-09,
+      "significant": true,
+      "mean_1": 1233.6870067503064,
+      "mean_2": 1406.171301944171,
+      "cohens_d": -3.745397623944181,
+      "better": "QA-QPSO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_PSO": {
+      "statistic": 0.0,
+      "p_value": 1.862645149230957e-09,
+      "significant": true,
+      "mean_1": 1233.6870067503064,
+      "mean_2": 2510.132253905088,
+      "cohens_d": -21.215456176703807,
+      "better": "QA-QPSO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_ACO": {
+      "statistic": 0.0,
+      "p_value": 1.862645149230957e-09,
+      "significant": true,
+      "mean_1": 1233.6870067503064,
+      "mean_2": 1447.933232008834,
+      "cohens_d": -4.349443181276874,
+      "better": "QA-QPSO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    }
+  },
+  "C101": {
+    "QPSO_vs_PSO": {
+      "statistic": 123.0,
+      "p_value": 0.023410143330693245,
+      "significant": true,
+      "mean_1": 4366.656709764416,
+      "mean_2": 4319.476486455989,
+      "cohens_d": 0.7217371496248882,
+      "better": "PSO",
+      "effect_size_interpretation": "medium",
+      "n_samples": 30
+    },
+    "QACO_vs_ACO": {
+      "statistic": 67.0,
+      "p_value": 0.0003449581563472748,
+      "significant": true,
+      "mean_1": 1987.358877203783,
+      "mean_2": 1824.9858925517144,
+      "cohens_d": 1.1991869406671902,
+      "better": "ACO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_QPSO": {
+      "statistic": 0.0,
+      "p_value": 1.862645149230957e-09,
+      "significant": true,
+      "mean_1": 1897.0076976672021,
+      "mean_2": 4366.656709764416,
+      "cohens_d": -26.596230097422627,
+      "better": "QA-QPSO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_QACO": {
+      "statistic": 21.0,
+      "p_value": 8.326023817062378e-07,
+      "significant": true,
+      "mean_1": 1897.0076976672021,
+      "mean_2": 1987.358877203783,
+      "cohens_d": -0.7610900655853547,
+      "better": "QA-QPSO",
+      "effect_size_interpretation": "medium",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_PSO": {
+      "statistic": 0.0,
+      "p_value": 1.862645149230957e-09,
+      "significant": true,
+      "mean_1": 1897.0076976672021,
+      "mean_2": 4319.476486455989,
+      "cohens_d": -23.749112620453545,
+      "better": "QA-QPSO",
+      "effect_size_interpretation": "large",
+      "n_samples": 30
+    },
+    "QA-QPSO_vs_ACO": {
+      "statistic": 137.0,
+      "p_value": 0.049710121005773544,
+      "significant": true,
+      "mean_1": 1897.0076976672021,
+      "mean_2": 1824.9858925517144,
+      "cohens_d": 0.5225729181381651,
+      "better": "ACO",
+      "effect_size_interpretation": "medium",
+      "n_samples": 30
+    }
+  }
+}

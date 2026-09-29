@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "QMaps — Admin Plan to Driver Route",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "admin-to-driver",
+        "label": "Admin to driver flow",
+        "focus": [
+          "web-ui",
+          "api",
+          "problem-model",
+          "optimizer",
+          "dispatch-state"
+        ],
+        "note": "Follow the Admin request through the existing solver, then see how dispatch reaches the Driver portal."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "web-ui",
+      "type": "frontend",
+      "label": "QMaps web app",
+      "sublabel": "Next.js · React · TypeScript · Leaflet",
+      "pos": [
+        70,
+        300
+      ],
+      "size": [
+        235,
+        100
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "FastAPI service",
+      "sublabel": "REST · port 8000 · request validation",
+      "pos": [
+        385,
+        300
+      ],
+      "size": [
+        235,
+        100
+      ]
+    },
+    {
+      "id": "problem-model",
+      "type": "backend",
+      "label": "Navi Mumbai VRP model",
+      "sublabel": "Demand · windows · priority · traffic",
+      "pos": [
+        700,
+        300
+      ],
+      "size": [
+        250,
+        100
+      ]
+    },
+    {
+      "id": "optimizer",
+      "type": "backend",
+      "label": "Existing Python algorithms",
+      "sublabel": "A* · PSO · QPSO · ACO · QACO · QA-QPSO",
+      "pos": [
+        1030,
+        300
+      ],
+      "size": [
+        285,
+        100
+      ]
+    },
+    {
+      "id": "dispatch-state",
+      "type": "backend",
+      "label": "Process-local state",
+      "sublabel": "Jobs · active dispatch · driver progress",
+      "pos": [
+        385,
+        520
+      ],
+      "size": [
+        235,
+        92
+      ]
+    },
+    {
+      "id": "benchmark-data",
+      "type": "database",
+      "label": "Project data files",
+      "sublabel": "Solomon CSVs · benchmark / stats",
+      "pos": [
+        700,
+        520
+      ],
+      "size": [
+        250,
+        92
+      ]
+    },
+    {
+      "id": "osm-tiles",
+      "type": "external",
+      "label": "OpenStreetMap tiles",
+      "sublabel": "Browser-loaded map tiles",
+      "pos": [
+        70,
+        85
+      ],
+      "size": [
+        235,
+        82
+      ]
+    },
+    {
+      "id": "osrm-router",
+      "type": "external",
+      "label": "OSRM-compatible router",
+      "sublabel": "Public default · configurable endpoint",
+      "pos": [
+        385,
+        85
+      ],
+      "size": [
+        235,
+        82
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "security-group",
+      "label": "Browser boundary · Admin and Driver UI",
+      "wraps": [
+        "web-ui"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "QMaps backend process + local project files",
+      "wraps": [
+        "api",
+        "problem-model",
+        "optimizer",
+        "dispatch-state",
+        "benchmark-data"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "External mapping services",
+      "wraps": [
+        "osm-tiles",
+        "osrm-router"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "ui-request",
+      "from": "web-ui",
+      "to": "api",
+      "label": "HTTP / JSON · optimize, dispatch, driver updates",
+      "variant": "emphasis",
+      "labelAt": [
+        345,
+        414
+      ]
+    },
+    {
+      "id": "api-response",
+      "from": "api",
+      "to": "web-ui",
+      "variant": "emphasis"
+    },
+    {
+      "id": "api-model",
+      "from": "api",
+      "to": "problem-model"
+    },
+    {
+      "id": "model-solver",
+      "from": "problem-model",
+      "to": "optimizer",
+      "label": "Selected existing algorithm",
+      "variant": "emphasis",
+      "labelAt": [
+        990,
+        414
+      ]
+    },
+    {
+      "id": "api-state",
+      "from": "api",
+      "to": "dispatch-state",
+      "label": "Job, dispatch, stop progress",
+      "variant": "dashed",
+      "labelAt": [
+        503,
+        414
+      ]
+    },
+    {
+      "id": "api-benchmarks",
+      "from": "api",
+      "to": "benchmark-data",
+      "label": "Read benchmark inputs / results",
+      "variant": "dashed"
+    },
+    {
+      "id": "browser-osm",
+      "from": "web-ui",
+      "to": "osm-tiles",
+      "variant": "dashed"
+    },
+    {
+      "id": "api-osrm",
+      "from": "api",
+      "to": "osrm-router",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Admin setup → route plan",
+      "items": [
+        "Admin supplies delivery points, demand, priority, time windows, fleet, algorithm, and traffic inputs. The API returns multi-vehicle routes and operating metrics.",
+        "Current Navi Mumbai preset: Turbhe depot, 12 delivery stops, and 4 vans at 65 kg each. The optimizer currently requires equal capacity across vehicles."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Dispatch → driver workflow",
+      "items": [
+        "Admin dispatches the generated plan. The Driver portal refreshes dispatch every 10 seconds and can post completed stops; the UI displays a selected vehicle route.",
+        "Current API returns the full dispatch and has no authentication or server-side per-driver access control. Driver-only data isolation is not yet enforced."
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Algorithms + research evidence",
+      "items": [
+        "FastAPI calls the existing Python registry: A*, PSO, QPSO, ACO, QACO, and QA-QPSO. A* is a shortest-path reference, not a multi-vehicle VRP solver.",
+        "Saved benchmarks cover RC101, RC201, and C101: 6 algorithms × 30 runs × 3 instances = 540 runs. These are benchmark results, not real-fleet trials."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Maps, traffic + current limits",
+      "items": [
+        "The browser loads OSM tiles; FastAPI proxies OSRM street geometry and turn steps after stop order is optimized. The solver uses coordinate-based distance, not road-network costs.",
+        "Congestion is preset or Admin-modeled; no live traffic feed. Jobs and dispatch live in process memory, so restart clears state. No persistent database, cloud deployment, or API authentication is configured."
+      ]
+    }
+  ]
+}

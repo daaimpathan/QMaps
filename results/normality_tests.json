@@ -1,0 +1,116 @@
+{
+  "RC101": {
+    "A*": {
+      "statistic": 1.0,
+      "p_value": 1.0,
+      "normal": true,
+      "n_samples": 30
+    },
+    "PSO": {
+      "statistic": 0.9728852702260044,
+      "p_value": 0.6207470309966644,
+      "normal": true,
+      "n_samples": 30
+    },
+    "QPSO": {
+      "statistic": 0.965905411353149,
+      "p_value": 0.4340035413086957,
+      "normal": true,
+      "n_samples": 30
+    },
+    "ACO": {
+      "statistic": 0.9231816670867822,
+      "p_value": 0.03246033156191877,
+      "normal": false,
+      "n_samples": 30
+    },
+    "QACO": {
+      "statistic": 0.8757575462650661,
+      "p_value": 0.002256075967117482,
+      "normal": false,
+      "n_samples": 30
+    },
+    "QA-QPSO": {
+      "statistic": 0.8369978364294325,
+      "p_value": 0.0003352243373638354,
+      "normal": false,
+      "n_samples": 30
+    }
+  },
+  "RC201": {
+    "A*": {
+      "statistic": 1.0,
+      "p_value": 1.0,
+      "normal": true,
+      "n_samples": 30
+    },
+    "PSO": {
+      "statistic": 0.9815565730796703,
+      "p_value": 0.8652633581079382,
+      "normal": true,
+      "n_samples": 30
+    },
+    "QPSO": {
+      "statistic": 0.9559250171758379,
+      "p_value": 0.24287525432255547,
+      "normal": true,
+      "n_samples": 30
+    },
+    "ACO": {
+      "statistic": 0.9260301650839706,
+      "p_value": 0.03855775006066442,
+      "normal": false,
+      "n_samples": 30
+    },
+    "QACO": {
+      "statistic": 0.9411426148655672,
+      "p_value": 0.09763975288678794,
+      "normal": true,
+      "n_samples": 30
+    },
+    "QA-QPSO": {
+      "statistic": 0.9833231100456977,
+      "p_value": 0.9053178985888396,
+      "normal": true,
+      "n_samples": 30
+    }
+  },
+  "C101": {
+    "A*": {
+      "statistic": 1.0,
+      "p_value": 1.0,
+      "normal": true,
+      "n_samples": 30
+    },
+    "PSO": {
+      "statistic": 0.9713708126944183,
+      "p_value": 0.5773285328894968,
+      "normal": true,
+      "n_samples": 30
+    },
+    "QPSO": {
+      "statistic": 0.9215004392800247,
+      "p_value": 0.029340921070894935,
+      "normal": false,
+      "n_samples": 30
+    },
+    "ACO": {
+      "statistic": 0.9585885701188268,
+      "p_value": 0.28495238593719097,
+      "normal": true,
+      "n_samples": 30
+    },
+    "QACO": {
+      "statistic": 0.9548607937709352,
+      "p_value": 0.22770783049120052,
+      "normal": true,
+      "n_samples": 30
+    },
+    "QA-QPSO": {
+      "statistic": 0.977505969972827,
+      "p_value": 0.7560800248932115,
+      "normal": true,
+      "n_samples": 30
+    }
+  }
+}

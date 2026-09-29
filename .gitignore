@@ -1,0 +1,39 @@
+# Python bytecode and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment-specific configuration
+.env
+.env.*
+!.env.example
+
+# Node and frontend build output
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+dist/
+build/
+
+# Local logs and editor/history artifacts
+*.log
+.history/
+.claude/settings.local.json
+
+# Generated visual-check artifacts
+qmaps-runtime-architecture.visual-check*
+
+# OS files
+.DS_Store
+Thumbs.db

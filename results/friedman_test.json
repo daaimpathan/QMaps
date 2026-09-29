@@ -1,0 +1,47 @@
+{
+  "RC101": {
+    "statistic": 143.75238095238103,
+    "p_value": 2.849967559414049e-29,
+    "significant": true,
+    "n_samples": 30,
+    "n_algorithms": 6,
+    "algorithms": [
+      "A*",
+      "ACO",
+      "PSO",
+      "QA-QPSO",
+      "QACO",
+      "QPSO"
+    ]
+  },
+  "RC201": {
+    "statistic": 143.8666666666668,
+    "p_value": 2.6948440783041884e-29,
+    "significant": true,
+    "n_samples": 30,
+    "n_algorithms": 6,
+    "algorithms": [
+      "A*",
+      "ACO",
+      "PSO",
+      "QA-QPSO",
+      "QACO",
+      "QPSO"
+    ]
+  },
+  "C101": {
+    "statistic": 137.18095238095248,
+    "p_value": 7.108151287248586e-28,
+    "significant": true,
+    "n_samples": 30,
+    "n_algorithms": 6,
+    "algorithms": [
+      "A*",
+      "ACO",
+      "PSO",
+      "QA-QPSO",
+      "QACO",
+      "QPSO"
+    ]
+  }
+}
