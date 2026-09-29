@@ -1,6 +1,6 @@
 # QMaps - Quantum-Inspired Intelligent Traffic Route Optimization
 
-**Competition Project** | **Status: ✅ Complete** | **Winner Algorithm: QA-QPSO**
+**Competition Project** | **Status:Completed** | **Winner Algorithm: QA-QPSO**
 
 ---
 
@@ -49,6 +49,16 @@ python analysis/plot.py results/mini_benchmark.csv
 ```bash
 python analysis/full_statistics.py results/mini_benchmark.csv
 ```
+### Run Backend 
+```bash
+python api/main.py
+```
+
+### Run Frontend
+```bash
+cd frontend
+npm run dev
+```
 
 ---
 
@@ -77,7 +87,7 @@ QMaps/
 ├── algorithms/
 │   ├── astar.py, pso.py, qpso.py    # Baselines
 │   ├── aco.py, qaco.py              # Ant colony algorithms
-│   ├── qa_qpso.py                   # ⭐ OUR INNOVATION
+│   ├── qa_qpso.py                   # OUR INNOVATION
 │   ├── dynamic.py                   # Dynamic VRP
 │   └── dynamic_events.py            # Traffic scenarios
 ├── benchmark/
@@ -89,10 +99,10 @@ QMaps/
 │   ├── plot.py                      # Visualizations
 │   └── route_visualizer.py          # 2D route maps
 ├── results/
-│   ├── mini_benchmark.csv           # ✅ Raw data
-│   ├── boxplots.png                 # ✅ Generated
-│   ├── algorithm_rankings.png       # ✅ Generated
-│   └── convergence_all...png        # ✅ Generated
+│   ├── mini_benchmark.csv           # Raw data
+│   ├── boxplots.png                 # Generated
+│   ├── algorithm_rankings.png       # Generated
+│   └── convergence_all...png        # Generated
 ├── data/instances/                  # Solomon benchmarks
 ├── CLAUDE.md                        # Project specification
 ├── REQUIREMENTS.md                  # Complete checklist
@@ -195,5 +205,3 @@ Research/Educational Project
 **Contact:** For questions about implementation details, see `CLAUDE.md` and `PRESENTATION_READY.md`
 
 **Winner:** QA-QPSO with 560.49 mean cost (17% better than classical ACO)
-
-**Status:** ✅ Project Complete | 🏆 Competition Ready
